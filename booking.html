@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking - Grand Luxe Hotel</title>
+  <meta name="description" content="Book a room at Grand Luxe Hotel online. Fill the form and we will confirm your booking.">
+  <meta name="keywords" content="hotel booking, room reservation, contact hotel">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="logo">🏨 Grand Luxe Hotel</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="rooms.html">Rooms</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="booking.html">Booking</a></li>
+    </ul>
+    <button onclick="toggleMenu()">☰ Menu</button>
+    <ul id="mobile-menu" style="display:none;">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="rooms.html">Rooms</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="booking.html">Booking</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-top">
+    <h1>Book a Room</h1>
+  </div>
+
+  <div class="section">
+
+    <!-- SUCCESS MESSAGE -->
+    <div id="success-msg" style="display:none; background:lightgreen; padding:15px; margin-bottom:20px; border-radius:8px;">
+      ✅ Your booking was submitted! We will contact you soon.
+    </div>
+
+    <!-- BOOKING FORM -->
+    <div class="form-box">
+      <h2>Reservation Form</h2>
+
+      <label>Full Name *</label>
+      <input type="text" id="name" placeholder="Enter your name">
+      <span id="name-err" class="error"></span>
+
+      <label>Email *</label>
+      <input type="email" id="email" placeholder="Enter your email">
+      <span id="email-err" class="error"></span>
+
+      <label>Phone Number *</label>
+      <input type="tel" id="phone" placeholder="Enter your phone number">
+      <span id="phone-err" class="error"></span>
+
+      <label>Check-in Date *</label>
+      <input type="date" id="checkin">
+      <span id="checkin-err" class="error"></span>
+
+      <label>Check-out Date *</label>
+      <input type="date" id="checkout">
+      <span id="checkout-err" class="error"></span>
+
+      <label>Room Type *</label>
+      <select id="room">
+        <option value="">-- Select Room --</option>
+        <option>Standard Room - ₹2,999/night</option>
+        <option>Deluxe Room - ₹4,999/night</option>
+        <option>Premium Suite - ₹9,999/night</option>
+        <option>Presidential Suite - ₹19,999/night</option>
+      </select>
+      <span id="room-err" class="error"></span>
+
+      <label>Number of Guests *</label>
+      <select id="guests">
+        <option value="">-- Select --</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+      </select>
+      <span id="guests-err" class="error"></span>
+
+      <label>Special Requests</label>
+      <textarea id="requests" rows="3" placeholder="Any special requests..."></textarea>
+
+      <button class="btn" onclick="submitForm()">Submit Booking</button>
+    </div>
+
+    <!-- CONTACT INFO -->
+    <div class="contact-box">
+      <h2>Contact Details</h2>
+      <p>📍 123 Main Street, Hyderabad, India</p>
+      <p>📞 +91 98765 43210</p>
+      <p>✉️ info@grandluxe.com</p>
+      <p>🕐 Front Desk: Open 24/7</p>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <p>© 2026 Grand Luxe Hotel</p>
+    <p>📍 123 Main Street, Hyderabad | 📞 +91 98765 43210 | ✉️ info@grandluxe.com</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
